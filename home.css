@@ -1,0 +1,431 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* navbar css */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li{
+    margin: 0 15px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.nav-links a{
+    text-decoration: none;
+    color: #989898;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links .active{
+    color: black;
+}
+.nav-links a:not(.active):hover{
+    color: black;
+}
+.logo h1{
+    font-family: "Permanent Marker", cursive;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 70px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+.search input{
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+    width:110px;
+    background-color: #dddddd;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    padding-left: 28px;
+    outline: none;
+}
+
+.search i{
+    transform: translate(-102px,1px);
+}
+
+/* body css */
+.news-body{
+    background-color: #EBEEF3;
+    height: 100vh;
+    width: 100%;
+}
+
+.first-news-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.basketball img{
+    height: 400px;
+    width: 500px;
+    margin-left: 40px;
+    margin-top: 50px;
+    opacity: 0.5;
+}
+
+.basketball span{
+    display: block;
+    font-family: "Diplomata SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xx-large;
+}
+.spans{
+    margin-top: -300px;
+    margin-left: 140px;
+}
+.spn{
+        background: linear-gradient(0deg, #000000 0%, #B8C2CE 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+}
+
+.player img{
+    z-index: 1;
+    margin-top: -200px;
+    margin-left: 300px;
+    width: 500px;
+    height: 400px;
+}
+.left-side{
+    width: 800px;
+}
+.right-side{
+    margin-top: 80px;
+    width: 270px;
+    margin-right: 50px;
+}
+/* card1 edits */
+.spn-right span{
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: normal;
+    display: inline-block;
+}
+.first-span{
+    color: #7a7a7a;
+}
+.card1 .spn-right,
+.card2 .spn-right{
+    margin-top: -70px;
+    color: black;
+    margin-left: 30px;
+    position: absolute;
+}
+.card1 .image-1 img,
+.card2 .image-1 img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.card1 .image-1,
+.card2 .image-1{
+    position: relative;
+    overflow: hidden;
+}
+.card1 .image-1::after{
+    content: '';
+    background: linear-gradient(to bottom, #F2F2F2 0%, #F2F2F2 100%);
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    filter: blur(10px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* card2 edits */
+.card2{
+    margin-top: 30px;
+}
+.card2 .image-1::after{
+    content: '';
+    background: linear-gradient(to bottom, #efeded 0%, #efeded 100%);
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    filter: blur(20px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.text-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 120px;
+    margin-left: 450px;
+    margin-top: -150px;
+}
+
+.text span{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-button .button a{
+    display: block;
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #EBEEF3;
+    background-color: rgb(107, 107, 107);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    margin-left: -50px;
+    width: 250px;
+}
+.text-button .button{
+    margin-top: 20px;
+}
+
+.text-button .button a:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+/* category edits */
+#category{
+    transition: 0.5s,ease-in-out;
+    margin-top: 10px;
+}
+#category.show{
+    opacity: 1;
+}
+#category .card {
+    display: flex;
+    justify-content: space-between;
+}
+
+#category .card .football{
+    margin-left: 10px;
+}
+#category .card .football .foot-text,
+#category .card .category-basketball .bask-text,
+#category .card .car-sport .car-text,
+#category .card .table-tenis .tenis-text
+{
+    background-color: #EBEEF3;
+    border-radius: 10px;
+}
+#category .card .football .foot-text span,
+#category .card .category-basketball .bask-text span,
+#category .card .car-sport .car-text span,
+#category .card .table-tenis .tenis-text span{
+    display: block;
+    width: 270px;
+    height: 60px;
+    text-align: center;
+    padding-top: 2px;
+    margin-bottom: 10px;
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+}
+
+.spn-category{
+    background: linear-gradient(0deg, #000000 0%, #2e5078 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.card img{
+    border-radius: 10px;
+}
+
+#category .card .category-basketball .bask-text span{
+    margin-top: 8px;
+    height: 110px;
+    padding-top: 30px;
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+}
+
+#category .card .table-tenis img{
+    height: 260px;
+    width: 270px;
+    object-fit: cover;
+}
+#category .card .table-tenis{
+    margin-right: 8px;
+}
+#category .card .table-tenis .tenis-text span{
+    margin-top: 8px;
+    height: 80px;
+    padding-top: 10px;
+    font-family: "Rock Salt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+}
+
+/* trending news edits */
+
+#trending{
+    border-radius: 10px;
+    margin: 5px 0 10px 0;
+    transition: 0.5s ease-in-out;
+}
+#trending h2{
+    margin: 15px 0 0 15px;
+}
+
+#trending .sides{
+    display: flex;
+    justify-content: space-between;
+}
+
+#trending .sides .trending-left-side span,
+#trending .sides .trending-right-side span{
+    display: block;
+}
+
+#trending .sides .trending-left-side .trending-card1,
+#trending .sides .trending-left-side .trending-card2,
+#trending .sides .trending-left-side .trending-card3{
+    margin: 20px 0 0 10px;
+    display: flex;
+}
+#trending .sides .trending-left-side{
+    background-color: #EBEEF3;
+    margin-left: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width:700px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+#trending .sides .trending-left-side span{
+    margin: 15px 0 0 30px;
+
+}
+
+#trending .sides .title-span{
+    font-family: "DM Serif Display", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.second-span{
+    color: #7a7a7a;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#trending .sides .trending-left-side span:nth-child(3){
+    color: #313131;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#trending .sides .trending-left-side img{
+    filter: brightness(50%);
+}
+
+hr{
+    width: 55%;
+    margin: 5px 0 0 260px;
+}
+
+/* right-side edit */
+
+#trending .trending-right-side{
+    margin-right: 15px;
+    position: relative;
+    display: inline-block;
+}
+#trending .sides .trending-right-side img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: brightness(50%);
+    display: block;
+}
+
+#trending .sides .trending-right-side .text-cycling{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    color: rgb(254, 254, 254);
+    z-index: 1;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: italic;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 6px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#trending .sides .trending-right-side .text-cycling:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(43, 43, 43);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+#trending .sides .trending-right-side .image-text-bottom{
+    position: absolute;
+    color: white;
+    bottom: 30px;
+    left: 25px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: x-large;
+    z-index: 1;
+}
+
+#trending .sides .trending-right-side .image-text-bottom1{
+    position: absolute;
+    color: white;
+    bottom: 100px;
+    left: 25px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: medium;
+    z-index: 1;
+}
+
+@media all and (min-width: 320px) and (max-width: 480px){
+    
+}
